@@ -1,0 +1,17 @@
+p{
+    background-color:cornsilk;
+    width: 40%;
+    margin-left: 10%;
+    border-left: 3px solid yellow;
+    padding-left: 5%;
+    margin-top: 1%;
+}
+.display{
+    display: flex;
+    margin: 5px;
+}
+img, svg{
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}

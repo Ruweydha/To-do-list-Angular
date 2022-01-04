@@ -1,0 +1,21 @@
+<h1 class="text-center">To do list</h1>
+ 
+<div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="Task">Task</label>
+                   <input type="text" class="form-control" #tasktodo placeholder="Enter task">
+            </div>
+            <div class="col-md-3">
+                <button class=" btn-warning btn-md mt-4" (click)='getTask(tasktodo.value); tasktodo.value = ""'>Submit task</button>
+            </div>
+        </div>
+    <div class="display" *ngFor ='let item of tasks'>
+      <p>{{item.name}}</p> 
+      <img (click) = "removeTask(item.id)" src="https://img.icons8.com/carbon-copy/100/000000/filled-trash.png"/>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="50" height="50"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#f1c40f"><path d="M37.84,13.76c-13.41062,0 -24.08,10.66938 -24.08,24.08v96.32c0,13.41063 10.66938,24.08 24.08,24.08h96.32c13.41063,0 24.08,-10.66937 24.08,-24.08v-82.56l-6.88,7.955v74.605c0,9.63469 -7.56531,17.2 -17.2,17.2h-96.32c-9.63469,0 -17.2,-7.56531 -17.2,-17.2v-96.32c0,-9.63469 7.56531,-17.2 17.2,-17.2h90.8375l5.4825,-6.88zM148.78,26.66l-66.5425,78.475l-27.95,-26.1225l-4.73,5.0525l30.6375,28.4875l2.6875,2.4725l2.2575,-2.6875l68.8,-81.27z"></path></g></g></svg>
+    </div>
+</div>
